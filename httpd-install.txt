@@ -1,0 +1,249 @@
+Microsoft Windows [Version 10.0.19045.5854]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\avadh>aws --version
+aws-cli/2.27.23 Python/3.13.3 Windows/10 exe/AMD64
+
+C:\Users\avadh>aws configure
+AWS Access Key ID [None]: AKIAQZNJV5OOKAT5G375
+AWS Secret Access Key [None]: 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
+Default region name [None]: eu-west-2
+Default output format [None]:
+
+C:\Users\avadh>aws iam list-users
+{
+    "Users": [
+        {
+            "Path": "/",
+            "UserName": "Avadhesh",
+            "UserId": "AIDAQZNJV5OONLE4SSB3L",
+            "Arn": "arn:aws:iam::054579817372:user/Avadhesh",
+            "CreateDate": "2025-05-27T16:20:24+00:00",
+            "PasswordLastUsed": "2025-05-28T16:38:51+00:00"
+        }
+    ]
+}
+
+
+C:\Users\avadh>ping 18.208.144.231
+
+Pinging 18.208.144.231 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 18.208.144.231:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\Users\avadh>ping ec2-18-208-144-231.compute-1.amazonaws.com
+
+Pinging ec2-18-208-144-231.compute-1.amazonaws.com [18.208.144.231] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 18.208.144.231:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\Users\avadh>ping 18.130.88.220
+
+Pinging 18.130.88.220 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 18.130.88.220:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\Users\avadh>cd aws
+
+C:\Users\avadh\aws>chmod 400 "Second Learning KeyPair2.pem"
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\avadh\aws>ssh
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address]
+           [-c cipher_spec] [-D [bind_address:]port] [-E log_file]
+           [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file]
+           [-J destination] [-L address] [-l login_name] [-m mac_spec]
+           [-O ctl_cmd] [-o option] [-P tag] [-p port] [-Q query_option]
+           [-R address] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]]
+           destination [command [argument ...]]
+
+C:\Users\avadh\aws>chmod 400 "Second Learning KeyPair2.pem"
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\avadh\aws>whoami
+desktop-ubq6fgl\avadh
+
+C:\Users\avadh\aws>ssh -i "Second Learning KeyPair2.pem" ec2-user@ec2-13-42-8-232.eu-west-2.compute.amazonaws.com
+The authenticity of host 'ec2-13-42-8-232.eu-west-2.compute.amazonaws.com (13.42.8.232)' can't be established.
+ED25519 key fingerprint is SHA256:CteNjTjU7mcJAFfsgSy/c+RS+deB68BDT0OmPDIuimw.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'ec2-13-42-8-232.eu-west-2.compute.amazonaws.com' (ED25519) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Fri May 30 08:25:08 2025 from 3.8.37.29
+[ec2-user@ip-172-31-47-41 ~]$ sudo su -
+[root@ip-172-31-47-41 ~]# whoami
+root
+[root@ip-172-31-47-41 ~]# exit
+logout
+[ec2-user@ip-172-31-47-41 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-47-41 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-47-41 ~]$ sudo yum install -y httpd
+Amazon Linux 2023 Kernel Livepatch repository                                           136 kB/s |  16 kB     00:00
+Dependencies resolved.
+========================================================================================================================
+ Package                         Architecture       Version                               Repository               Size
+========================================================================================================================
+Installing:
+ httpd                           x86_64             2.4.62-1.amzn2023                     amazonlinux              48 k
+Installing dependencies:
+ apr                             x86_64             1.7.5-1.amzn2023.0.4                  amazonlinux             129 k
+ apr-util                        x86_64             1.6.3-1.amzn2023.0.1                  amazonlinux              98 k
+ generic-logos-httpd             noarch             18.0.0-12.amzn2023.0.3                amazonlinux              19 k
+ httpd-core                      x86_64             2.4.62-1.amzn2023                     amazonlinux             1.4 M
+ httpd-filesystem                noarch             2.4.62-1.amzn2023                     amazonlinux              14 k
+ httpd-tools                     x86_64             2.4.62-1.amzn2023                     amazonlinux              81 k
+ libbrotli                       x86_64             1.0.9-4.amzn2023.0.2                  amazonlinux             315 k
+ mailcap                         noarch             2.1.49-3.amzn2023.0.3                 amazonlinux              33 k
+Installing weak dependencies:
+ apr-util-openssl                x86_64             1.6.3-1.amzn2023.0.1                  amazonlinux              17 k
+ mod_http2                       x86_64             2.0.27-1.amzn2023.0.3                 amazonlinux             166 k
+ mod_lua                         x86_64             2.4.62-1.amzn2023                     amazonlinux              61 k
+
+Transaction Summary
+========================================================================================================================
+Install  12 Packages
+
+Total download size: 2.3 M
+Installed size: 6.9 M
+Downloading Packages:
+(1/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                442 kB/s |  17 kB     00:00
+(2/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                        2.1 MB/s |  98 kB     00:00
+(3/12): apr-1.7.5-1.amzn2023.0.4.x86_64.rpm                                             2.6 MB/s | 129 kB     00:00
+(4/12): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                           997 kB/s |  19 kB     00:00
+(5/12): httpd-2.4.62-1.amzn2023.x86_64.rpm                                              2.4 MB/s |  48 kB     00:00
+(6/12): httpd-filesystem-2.4.62-1.amzn2023.noarch.rpm                                   643 kB/s |  14 kB     00:00
+(7/12): httpd-core-2.4.62-1.amzn2023.x86_64.rpm                                          32 MB/s | 1.4 MB     00:00
+(8/12): httpd-tools-2.4.62-1.amzn2023.x86_64.rpm                                        2.7 MB/s |  81 kB     00:00
+(9/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                       9.7 MB/s | 315 kB     00:00
+(10/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.rpm                                       1.4 MB/s |  33 kB     00:00
+(11/12): mod_http2-2.0.27-1.amzn2023.0.3.x86_64.rpm                                     4.6 MB/s | 166 kB     00:00
+(12/12): mod_lua-2.4.62-1.amzn2023.x86_64.rpm                                           3.1 MB/s |  61 kB     00:00
+------------------------------------------------------------------------------------------------------------------------
+Total                                                                                    14 MB/s | 2.3 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                1/1
+  Installing       : apr-1.7.5-1.amzn2023.0.4.x86_64                                                               1/12
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                  2/12
+  Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                          3/12
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                          4/12
+  Installing       : httpd-tools-2.4.62-1.amzn2023.x86_64                                                          5/12
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                         6/12
+  Running scriptlet: httpd-filesystem-2.4.62-1.amzn2023.noarch                                                     7/12
+  Installing       : httpd-filesystem-2.4.62-1.amzn2023.noarch                                                     7/12
+  Installing       : httpd-core-2.4.62-1.amzn2023.x86_64                                                           8/12
+  Installing       : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                        9/12
+  Installing       : mod_lua-2.4.62-1.amzn2023.x86_64                                                             10/12
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                            11/12
+  Installing       : httpd-2.4.62-1.amzn2023.x86_64                                                               12/12
+  Running scriptlet: httpd-2.4.62-1.amzn2023.x86_64                                                               12/12
+  Verifying        : apr-1.7.5-1.amzn2023.0.4.x86_64                                                               1/12
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                          2/12
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                  3/12
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                             4/12
+  Verifying        : httpd-2.4.62-1.amzn2023.x86_64                                                                5/12
+  Verifying        : httpd-core-2.4.62-1.amzn2023.x86_64                                                           6/12
+  Verifying        : httpd-filesystem-2.4.62-1.amzn2023.noarch                                                     7/12
+  Verifying        : httpd-tools-2.4.62-1.amzn2023.x86_64                                                          8/12
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                         9/12
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                         10/12
+  Verifying        : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                       11/12
+  Verifying        : mod_lua-2.4.62-1.amzn2023.x86_64                                                             12/12
+
+Installed:
+  apr-1.7.5-1.amzn2023.0.4.x86_64                          apr-util-1.6.3-1.amzn2023.0.1.x86_64
+  apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64             generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch
+  httpd-2.4.62-1.amzn2023.x86_64                           httpd-core-2.4.62-1.amzn2023.x86_64
+  httpd-filesystem-2.4.62-1.amzn2023.noarch                httpd-tools-2.4.62-1.amzn2023.x86_64
+  libbrotli-1.0.9-4.amzn2023.0.2.x86_64                    mailcap-2.1.49-3.amzn2023.0.3.noarch
+  mod_http2-2.0.27-1.amzn2023.0.3.x86_64                   mod_lua-2.4.62-1.amzn2023.x86_64
+
+Complete!
+[ec2-user@ip-172-31-47-41 ~]$ sudo systemctl start httpd
+[ec2-user@ip-172-31-47-41 ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; preset: disabled)
+     Active: active (running) since Fri 2025-05-30 09:34:49 UTC; 19s ago
+       Docs: man:httpd.service(8)
+   Main PID: 29593 (httpd)
+     Status: "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec"
+      Tasks: 177 (limit: 1111)
+     Memory: 13.0M
+        CPU: 75ms
+     CGroup: /system.slice/httpd.service
+             ├─29593 /usr/sbin/httpd -DFOREGROUND
+             ├─29594 /usr/sbin/httpd -DFOREGROUND
+             ├─29595 /usr/sbin/httpd -DFOREGROUND
+             ├─29596 /usr/sbin/httpd -DFOREGROUND
+             └─29597 /usr/sbin/httpd -DFOREGROUND
+
+May 30 09:34:49 ip-172-31-47-41.eu-west-2.compute.internal systemd[1]: Starting httpd.service - The Apache HTTP Server.>
+May 30 09:34:49 ip-172-31-47-41.eu-west-2.compute.internal systemd[1]: Started httpd.service - The Apache HTTP Server.
+May 30 09:34:49 ip-172-31-47-41.eu-west-2.compute.internal httpd[29593]: Server configured, listening on: port 80
+lines 1-19/19 (END)
+[ec2-user@ip-172-31-47-41 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-47-41 ~]$ ls
+[ec2-user@ip-172-31-47-41 ~]$ ls
+[ec2-user@ip-172-31-47-41 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-47-41 ~]$ cd ..
+[ec2-user@ip-172-31-47-41 home]$ ls
+ec2-user
+[ec2-user@ip-172-31-47-41 home]$ pwd
+/home
+[ec2-user@ip-172-31-47-41 home]$ cd ec2-user
+[ec2-user@ip-172-31-47-41 ~]$ vi index.html
+[ec2-user@ip-172-31-47-41 ~]$ [ec2-user@ip-172-31-47-41 ~]$ ls
+index.html
+[ec2-user@ip-172-31-47-41 ~]$ mv index.html /var/www/html
+mv: cannot move 'index.html' to '/var/www/html/index.html': Permission denied
+[ec2-user@ip-172-31-47-41 ~]$ sudo mv index.html /var/www/html
+[ec2-user@ip-172-31-47-41 ~]$ sudo su -
+Last login: Fri May 30 09:30:43 UTC 2025 on pts/1
+[root@ip-172-31-47-41 ~]# ls
+[root@ip-172-31-47-41 ~]# pwd
+/root
+[root@ip-172-31-47-41 ~]# whoami
+root
+[root@ip-172-31-47-41 ~]# cd /var/www/html
+[root@ip-172-31-47-41 html]# ls
+index.html
+[root@ip-172-31-47-41 html]# systemctl restart httpd
+[root@ip-172-31-47-41 html]# pwd
+/var/www/html
+[root@ip-172-31-47-41 html]# ls
+index.html
